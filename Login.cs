@@ -42,7 +42,7 @@ namespace ProyectoRavaSandwich
         {
             bool blnfound = false;//Booleano que indica la existencia de datos, por default es falso
 
-            NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;User Id=postgres;Password=wasabix007;Database=Rava_Sandwich");//Datos de conexion a la BD
+            NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;User Id=postgres;Password = ContraseñaServer;Database = NombreBD");//Datos de conexion a la BD
             conn.Open();// Abre la BD
 
             //Realiza la consulta si los datos ingresados por el textbox son iguales a las que están en la BD
