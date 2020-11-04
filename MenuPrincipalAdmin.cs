@@ -32,5 +32,17 @@ namespace ProyectoRavaSandwich
             //Cerrar ventana actual.
             this.Close();
         }
+
+        private void botonInventario_Click(object sender, EventArgs e)
+        {
+            //Se crea objeto.
+            MenuInventario inventario = new MenuInventario();
+
+            //Abrir ventana de menu inventario.
+            inventario.Show();
+
+            //Cerrar ventana actual.
+            this.Close();
+        }
     }
 }

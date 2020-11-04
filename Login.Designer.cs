@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.IngresoRUT = new System.Windows.Forms.TextBox();
             this.botonIngresar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,7 +38,8 @@
             // 
             // IngresoRUT
             // 
-            this.IngresoRUT.Location = new System.Drawing.Point(12, 66);
+            this.IngresoRUT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.IngresoRUT.Location = new System.Drawing.Point(230, 99);
             this.IngresoRUT.Name = "IngresoRUT";
             this.IngresoRUT.Size = new System.Drawing.Size(199, 20);
             this.IngresoRUT.TabIndex = 0;
@@ -45,39 +47,47 @@
             // 
             // botonIngresar
             // 
-            this.botonIngresar.Location = new System.Drawing.Point(69, 177);
+            this.botonIngresar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.botonIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.botonIngresar.Location = new System.Drawing.Point(281, 211);
             this.botonIngresar.Name = "botonIngresar";
-            this.botonIngresar.Size = new System.Drawing.Size(75, 41);
+            this.botonIngresar.Size = new System.Drawing.Size(96, 28);
             this.botonIngresar.TabIndex = 1;
             this.botonIngresar.Text = "Ingresar";
-            this.botonIngresar.UseVisualStyleBackColor = true;
+            this.botonIngresar.UseVisualStyleBackColor = false;
             this.botonIngresar.Click += new System.EventHandler(this.boton_Ingresar_Click);
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 38);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(269, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 25);
+            this.label1.Size = new System.Drawing.Size(133, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "RUT usuario";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 109);
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(297, 136);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 25);
+            this.label2.Size = new System.Drawing.Size(64, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "Clave";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // IngresoPass
             // 
-            this.IngresoPass.Location = new System.Drawing.Point(12, 137);
+            this.IngresoPass.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.IngresoPass.Location = new System.Drawing.Point(230, 168);
             this.IngresoPass.Name = "IngresoPass";
             this.IngresoPass.PasswordChar = '*';
             this.IngresoPass.Size = new System.Drawing.Size(199, 20);
@@ -88,12 +98,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(625, 336);
             this.Controls.Add(this.IngresoPass);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.botonIngresar);
             this.Controls.Add(this.IngresoRUT);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);

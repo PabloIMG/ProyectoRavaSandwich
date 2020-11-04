@@ -30,3 +30,4 @@ C:\Users\HP\Desktop\Informatica\Programacion en C#\ProyectoRavaSandwich\bin\Debu
 C:\Users\HP\Desktop\Informatica\Programacion en C#\ProyectoRavaSandwich\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\HP\Desktop\Informatica\Programacion en C#\ProyectoRavaSandwich\bin\Debug\System.ValueTuple.xml
 C:\Users\HP\Desktop\Informatica\Programacion en C#\ProyectoRavaSandwich\obj\Debug\ProyectoRavaSandwich.csproj.CopyComplete
+C:\Users\HP\Desktop\Informatica\Programacion en C#\ProyectoRavaSandwich\obj\Debug\ProyectoRavaSandwich.MenuInventario.resources
