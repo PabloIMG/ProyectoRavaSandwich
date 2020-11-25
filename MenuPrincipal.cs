@@ -10,19 +10,22 @@ using System.Windows.Forms;
 
 namespace ProyectoRavaSandwich
 {
-    public partial class MenuPrincipalAdmin : Form
+    public partial class MenuPrincipal : Form
     {
-        public MenuPrincipalAdmin()
+        public MenuPrincipal()
         {
             InitializeComponent();
         }
 
-        private void botonAgregarUsuario_Click(object sender, EventArgs e)
+        private void botonInventario_Click(object sender, EventArgs e)
         {
-            GestionUsuarios menuGestion = new GestionUsuarios();
+            //Se crea objeto.
+            MenuInventario inventario = new MenuInventario();
 
-            menuGestion.Show();
+            //Abrir ventana de menu inventario.
+            inventario.Show();
 
+            //Cerrar ventana actual.
             this.Close();
         }
 
@@ -32,18 +35,6 @@ namespace ProyectoRavaSandwich
 
             //Mostrar login
             login.Show();
-
-            //Cerrar ventana actual.
-            this.Close();
-        }
-
-        private void botonInventario_Click(object sender, EventArgs e)
-        {
-            //Se crea objeto.
-            MenuInventarioAdmin inventario = new MenuInventarioAdmin();
-
-            //Abrir ventana de menu inventario.
-            inventario.Show();
 
             //Cerrar ventana actual.
             this.Close();

@@ -46,7 +46,7 @@ namespace ProyectoRavaSandwich
             conn.Open();// Abre la BD
 
             //Realiza la consulta si los datos ingresados por el textbox son iguales a las que están en la BD
-            NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM Usuario WHERE PK_Rut ='" + IngresoRUT.Text + "' and pass = '" + IngresoPass.Text + "'", conn);
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM Usuario WHERE PK_Rut ='" + IngresoRUT.Text + "' and pass = '" + IngresoPass.Text + "' and rol = 'Administrador'", conn);
             NpgsqlDataReader dr = cmd.ExecuteReader();//Guarda los resultados de la consulta
 
             if (dr.Read())//Si hay datos
@@ -60,9 +60,35 @@ namespace ProyectoRavaSandwich
             if (blnfound == false)//si no se encuentra
             {
                 //muestra un lindo mensajito
-                MessageBox.Show("Usuario o contraseña incorrectos", "Message Box", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                //MessageBox.Show("Usuario o contraseña incorrectos", "Message Box", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                 dr.Close(); // Cierra el registro de la consulta
                 conn.Close();// Cierra la consulta
+            }
+
+            /*                  Verificar.                  */
+            bool blnfoundRol = false;//Booleano que indica la existencia de datos, por default es falso
+
+            NpgsqlConnection conn1 = new NpgsqlConnection("Server=localhost;Port=5432;User Id=postgres;Password = rava;Database = Rava_Sandwich");//Datos de conexion a la BD
+            conn1.Open();// Abre la BD
+
+            //Realiza la consulta si los datos ingresados por el textbox son iguales a las que están en la BD
+            NpgsqlCommand cmd1 = new NpgsqlCommand("SELECT * FROM Usuario WHERE PK_Rut ='" + IngresoRUT.Text + "' and pass = '" + IngresoPass.Text + "' and rol = 'Usuario'", conn1);
+            NpgsqlDataReader dr1 = cmd1.ExecuteReader();//Guarda los resultados de la consulta
+
+            if (dr1.Read())//Si hay datos
+            {
+                blnfoundRol = true;//la existencia de datos es verdadera
+                MenuPrincipal menu = new MenuPrincipal(); //Crea un objeto del menú
+                menu.Show();// invoca la ventana del menú
+                this.Hide();//Oculta la ventana del login
+            }
+
+            if (blnfoundRol == false && blnfound == false)//si no se encuentra
+            {
+                //muestra un lindo mensajito
+                MessageBox.Show("Usuario o contraseña incorrectos", "Message Box", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                dr1.Close(); // Cierra el registro de la consulta
+                conn1.Close();// Cierra la consulta
             }
         }
     }

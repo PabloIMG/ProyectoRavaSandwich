@@ -31,3 +31,12 @@ C:\Users\HP\Desktop\Informatica\Programacion en C#\ProyectoRavaSandwich\bin\Debu
 C:\Users\HP\Desktop\Informatica\Programacion en C#\ProyectoRavaSandwich\bin\Debug\System.ValueTuple.xml
 C:\Users\HP\Desktop\Informatica\Programacion en C#\ProyectoRavaSandwich\obj\Debug\ProyectoRavaSandwich.csproj.CopyComplete
 C:\Users\HP\Desktop\Informatica\Programacion en C#\ProyectoRavaSandwich\obj\Debug\ProyectoRavaSandwich.MenuInventario.resources
+C:\Users\HP\Desktop\Informatica\Programacion en C#\ProyectoRavaSandwich\obj\Debug\ProyectoRavaSandwich.MenuInventarioAdmin.resources
+C:\Users\HP\Desktop\Informatica\Programacion en C#\ProyectoRavaSandwich\obj\Debug\ProyectoRavaSandwich.MenuPrincipal.resources
+C:\Users\HP\Desktop\Informatica\Programacion en C#\ProyectoRavaSandwich\obj\Debug\ProyectoRavaSandwich.IngresarProducto.resources
+C:\Users\HP\Desktop\Informatica\Programacion en C#\ProyectoRavaSandwich\obj\Debug\ProyectoRavaSandwich.ConsumirProducto.resources
+C:\Users\HP\Desktop\Informatica\Programacion en C#\ProyectoRavaSandwich\obj\Debug\ProyectoRavaSandwich.AgregarProducto.resources
+C:\Users\HP\Desktop\Informatica\Programacion en C#\ProyectoRavaSandwich\obj\Debug\ProyectoRavaSandwich.EliminarProducto.resources
+C:\Users\HP\Desktop\Informatica\Programacion en C#\ProyectoRavaSandwich\obj\Debug\ProyectoRavaSandwich.GestionUsuarios.resources
+C:\Users\HP\Desktop\Informatica\Programacion en C#\ProyectoRavaSandwich\obj\Debug\ProyectoRavaSandwich.AgregarUsuario.resources
+C:\Users\HP\Desktop\Informatica\Programacion en C#\ProyectoRavaSandwich\bin\Debug\PlaceholderTextBox.dll

@@ -9,22 +9,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
 
+/* Apuntes rancios 
+ 
+    Botones.
+        Ingreso Producto: Agregar stock.
+        Consumo Producto: Quitar stock.
+        Agregar Ingrediente: Agregar un nuevo producto a la BD.
+        Eliminar Ingrediente: Eliminar producto de la BD.
+*/
+
 namespace ProyectoRavaSandwich
 {
-    public partial class MenuInventario : Form
+    public partial class MenuInventarioAdmin : Form
     {
-        public MenuInventario()
+        public MenuInventarioAdmin()
         {
             InitializeComponent();
             llenarTabla();
         }
 
         private void tabla_Inventario_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void MenuInventario_Load(object sender, EventArgs e)
         {
 
         }
@@ -42,7 +46,7 @@ namespace ProyectoRavaSandwich
 
         private void irMenu_Click(object sender, EventArgs e)
         {
-            MenuPrincipal menu = new MenuPrincipal();
+            MenuPrincipalAdmin menu = new MenuPrincipalAdmin();
 
             menu.Show();
 
@@ -53,7 +57,15 @@ namespace ProyectoRavaSandwich
         {
             IngresarProducto ingresar = new IngresarProducto();
 
-            ingresar.Show();
+            if (Application.OpenForms[ingresar.Name] == null)
+            {
+                ingresar.Show();
+            }
+            else
+            {
+                Application.OpenForms[ingresar.Name].Activate();
+            }
+
         }
 
         private void llenarTabla()
@@ -96,8 +108,44 @@ namespace ProyectoRavaSandwich
         private void consumo_Producto_Click(object sender, EventArgs e)
         {
             ConsumirProducto consumir = new ConsumirProducto();
+            
+            if (Application.OpenForms[consumir.Name] == null)
+            {
+                consumir.Show();
+            }
+            else
+            {
+                Application.OpenForms[consumir.Name].Activate();
+            }
+        }
 
-            consumir.Show();
+        private void agregar_Ingrediente_Click(object sender, EventArgs e)
+        {
+            AgregarProducto agregar = new AgregarProducto();
+
+            if (Application.OpenForms[agregar.Name] == null)
+            {
+                agregar.Show();
+            }
+            else
+            {
+                Application.OpenForms[agregar.Name].Activate();
+            }
+        }
+
+        private void eliminar_Ingrediente_Click(object sender, EventArgs e)
+        {
+            EliminarProducto eliminar = new EliminarProducto();
+
+            if (Application.OpenForms[eliminar.Name] == null)
+            {
+                eliminar.Show();
+            }
+            else
+            {
+                Application.OpenForms[eliminar.Name].Activate();
+            }
+
         }
     }
 }
